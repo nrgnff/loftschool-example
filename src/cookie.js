@@ -76,8 +76,8 @@ function filterName(input) {
   }
 }  
 
-addButton.addEventListener('click', (evt) => {
-  evt.preventDefault()
+addButton.addEventListener('click', (e) => {
+  e.preventDefault()
   // здесь можно обработать нажатие на кнопку "добавить cookie"
   createCookie();
 });
@@ -158,9 +158,9 @@ function createTR(cookieName, cookieValue) {
 
   deleteCookieBtn.innerText = 'Удалить';
   deleteCookieBtn.id = cookieName;
-  deleteCookieBtn.addEventListener('click', (evt)=>{
-      evt.preventDefault();
-      let cookieName = evt.target.id;
+  deleteCookieBtn.addEventListener('click', (e)=>{
+      e.preventDefault();
+      let cookieName = e.target.id;
 
       deleteCookie(cookieName);
       document.getElementById(cookieName).remove()
